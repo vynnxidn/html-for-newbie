@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glassmorphism Card Auto-Width</title>
+    <style>
+        /* Mengatur latar belakang halaman agar efek glassmorphism terlihat jelas */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #000000;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #ffffff;
+            gap: 30px;
+        }
+
+        /* Ini selector utama untuk Card Glass-nya */
+        .glass-card {
+            /* Trik agar lebar card mengikuti panjang isi konten/tulisan */
+            width: max-content;
+            max-width: 85vw; /* Batas maksimal lebar agar tidak jebol di layar HP */
+            
+            /* Efek Glassmorphism (Transparansi & Blur) */
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px); /* Dukungan untuk Safari */
+            
+            /* Border tipis transparan agar terlihat seperti kaca nyata */
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            
+            /* Padding dan Bayangan (Shadow) */
+            padding: 25px 40px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+            
+            /* Animasi transisi halus saat konten berubah */
+            transition: all 0.3s ease;
+        }
+
+        /* Gaya teks di dalam card */
+        .glass-card p {
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            white-space: nowrap; /* Mencegah teks turun ke bawah secara otomatis agar card melebar ke samping */
+        }
+
+        /* Mengembalikan teks agar bisa turun ke bawah hanya di layar kecil (Responsif HP) */
+        @media (max-width: 600px) {
+            .glass-card p {
+                white-space: normal;
+            }
+            .glass-card {
+                width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Kunci utamanya ada di div ini -->
+    <div class="glass-card">
+        <p>meteri 01 : &lt;div&gt;</p>
+    </div>
+    <div class="glass-card">
+        Tag &lt;div&gt; itu seperti kardus kosong tempat Anda mengelompokkan berbagai barang (teks, gambar, tombol) agar mudah diatur dan dipindahkan sekaligus.
+    </div>
+
+</body>
+</html>
