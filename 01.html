@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glassmorphism Card Auto-Width</title>
+    <title>apa itu div?</title>
     <style>
         /* Mengatur latar belakang halaman agar efek glassmorphism terlihat jelas */
         body {
@@ -72,6 +72,66 @@
     <div class="glass-card">
         Tag &lt;div&gt; itu seperti kardus kosong tempat Anda mengelompokkan berbagai barang (teks, gambar, tombol) agar mudah diatur dan dipindahkan sekaligus.
     </div>
+    <!-- Wadah Utama: Glassmorphism Card -->
+<div style="
+    width: max-content;
+    max-width: 85vw;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    padding: 25px 40px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    display: flex;
+    gap: 15px; /* Jarak antar tombol */
+    align-items: center;
+">
+
+    <!-- Tombol KEMBALI (Arahkan ke index.html atau halaman sebelumnya) -->
+    <a href="index.html" style="
+        display: inline-block;
+        padding: 10px 24px;
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        color: #ffffff;
+        text-decoration: none;
+        font-family: sans-serif;
+        font-weight: 600;
+        font-size: 0.95rem;
+        letter-spacing: 0.5px;
+        white-space: nowrap;
+        transition: all 0.2s ease;
+    " onmouseover="this.style.background='rgba(255, 255, 255, 0.3)'; this.style.borderColor='rgba(255, 255, 255, 0.5)'" 
+       onmouseout="this.style.background='rgba(255, 255, 255, 0.15)'; this.style.borderColor='rgba(255, 255, 255, 0.2)'">
+        ← Kembali
+    </a>
+
+    <!-- Tombol LANJUT (Arahkan ke halaman3.html atau halaman berikutnya) -->
+    <a href="halaman3.html" style="
+        display: inline-block;
+        padding: 10px 24px;
+        background: #ffffff; /* Tombol lanjut dibikin solid agar lebih kontras */
+        border: 1px solid #ffffff;
+        border-radius: 8px;
+        color: #764ba2; /* Teks mengikuti warna gradasi latar belakang */
+        text-decoration: none;
+        font-family: sans-serif;
+        font-weight: 600;
+        font-size: 0.95rem;
+        letter-spacing: 0.5px;
+        white-space: nowrap;
+        transition: all 0.2s ease;
+        box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+    " onmouseover="this.style.opacity='0.9'; this.style.transform='translateY(-1px)'" 
+       onmouseout="this.style.opacity='1'; this.style.transform='translateY(0)'">
+        Lanjut →
+    </a>
+
+</div>
+
+
 
 </body>
 </html>
